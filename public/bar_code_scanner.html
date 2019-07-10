@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bar Scanner</title>
+    <link rel="stylesheet" href="./css/bar_code_scanner.css">
+    <!-- Or use a CDN -->
+    <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Div to show the scanner -->
+    <div id="scanner-container"></div>
+    <!-- <input type="button" id="btn" value="Start/Stop the scanner" /> -->
+
+    <!-- Loader -->
+    <div class="loader" id="loader"></div>
+
+    <!-- Include the image-diff library
+    <script src="quagga.min.js"></script> -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
+    
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAtMBjsWOS8cEdoTJP5HMUJeyJfVMKP6XA",
+    authDomain: "smartlabapp-cb843.firebaseapp.com",
+    databaseURL: "https://smartlabapp-cb843.firebaseio.com",
+    projectId: "smartlabapp-cb843",
+    storageBucket: "smartlabapp-cb843.appspot.com",
+    messagingSenderId: "341823870022",
+    appId: "1:341823870022:web:2700c6d2a2819cb9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    </script>
+
+    <script src="./qr/bar_code_scanner.js"></script>
+</body>
+
+</html>

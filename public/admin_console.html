@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./css/admin_console.css">
+</head>
+<body>
+    
+    <div class="header">
+        <img src="./img/person36.png" alt="admin">
+        <div id="admin_name_show"></div>
+        <span id="admin_logout">LOGOUT</span>
+    </div>
+    <div class="nav_bar">
+        <ul>
+            <li id="myBtn">Add Item</li>
+            <li id="removeBtn">Remove Item</li>           
+            <li><a href="./qrcode_scanner.html">Borrow Item</a></li>
+            <li><a href="./bar_code_scanner.html">Return Item</a></li>
+        </ul>
+    </div>
+    <div class="items_container" id="items_container">
+        <div class="items_container_heading">
+            Available Items: 
+        </div>
+        <div class="items_container2" id="items_container2">
+
+        </div>
+            <!-- <div class="item_show">
+                <p><span class="item_name_show">Padometer</span> <span class="item_num_show">PD123</span></p>
+                <p class="item_desc_show">This sensor is used for counting the steps.</p>
+            </div> -->
+    </div>
+    <div class="items_container" id="items_container">
+        <div class="items_container_heading">
+            Borrowed Items: 
+        </div>
+        <div class="items_container_borrowed_items" id="items_container_borrowed_items">
+            <!-- <div class="item_show">
+                <p><span class="item_name_show">Padometer</span> <span class="item_num_show">PD123</span></p>
+                <p class="item_common">Borrowed By: <div class="item_common_div">souravnihore@gmail.com</div></p>
+                <p class="item_common">Return Date: <div class="item_common_div">02-07-2019</div></p>
+            </div> -->
+        </div>
+            
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="loader" id="loader"></div>
+        <!-- Modal content -->
+        <div class="modal-content" id="modal-content">
+            <span class="close" id="close_add_item_panel">&times;</span>
+            <h3>Add Items to Smart Lab App</h3>
+            <form method="POST">
+                <input type="text" id="item_name" placeholder="Item Name"><br>
+                <input type="text" id="item_number" placeholder="Item Number"><br>
+                <textarea rows="6" cols="50" placeholder="Description" form="add_item_form" id="item_description"></textarea><br>
+                <input type="file" id="add_item_files"><br>
+                <input type="button" value="ADD" id="add_item_btn">
+            </form>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal2" class="modal2">
+    <div class="loader" id="loader2"></div>
+    <!-- Modal content -->
+    <div class="modal-content" id="modal-content2">
+    <span class="close" id="close_add_item_panel">&times;</span>
+    <h3>Delete Item</h3>
+    <form method="POST">
+        <input type="text" id="delete_item_number" placeholder="Item Number"><br>
+        
+        <input type="button" value="Delete" id="delete_item_btn">
+    </form>
+    </div>
+
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
+    
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAtMBjsWOS8cEdoTJP5HMUJeyJfVMKP6XA",
+    authDomain: "smartlabapp-cb843.firebaseapp.com",
+    databaseURL: "https://smartlabapp-cb843.firebaseio.com",
+    projectId: "smartlabapp-cb843",
+    storageBucket: "smartlabapp-cb843.appspot.com",
+    messagingSenderId: "341823870022",
+    appId: "1:341823870022:web:2700c6d2a2819cb9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    </script>
+    <script src="./js/admin_console.js"></script>
+    <script src="./js/admin_console_add_items.js"></script>
+    <script src="./js/admin_console_get_items.js"></script>
+    <script src="./js/admin_console_delete_item.js"></script>
+</body>
+</html>

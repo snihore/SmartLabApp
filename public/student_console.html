@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student</title>
+    <link rel="stylesheet" href="./css/student_console.css">
+    <script src="./qr/jquery.min.js"></script>
+    <script src="./qr/qrcode.min.js"></script>
+</head>
+<body>
+    
+    <div class="header">
+        <img src="./img/person36.png" alt="admin">
+        <div id="stu_name_show"></div>
+        <span id="stu_logout">LOGOUT</span>
+        <span id="stu_borrow">BORROW</span>
+    </div>
+
+    <div id="qrcode"></div>
+
+    <div class="items_container" id="items_container">
+            <div class="items_container_heading">
+                    Available Items: 
+            </div>
+        <div class="items_container2" id="items_container2"></div>
+        <!-- <div class="item_show">
+            <p><span class="item_name_show">Padometer</span> <span class="item_num_show">PD123</span></p>
+            <p class="item_desc_show">This sensor is used for counting the steps.</p>
+        </div> -->
+        
+        
+    </div>
+    <div class="items_container" id="items_container">
+        <div class="items_container_heading">
+            Borrowed Items: 
+        </div>
+        <div class="items_container_borrowed_items" id="items_container_borrowed_items">
+            <!-- <div class="item_show">
+                <p><span class="item_name_show">Padometer</span> <span class="item_num_show">PD123</span></p>
+                <p class="item_common">Borrowed By: <div class="item_common_div">souravnihore@gmail.com</div></p>
+                <p class="item_common">Return Date: <div class="item_common_div">02-07-2019</div></p>
+            </div> -->
+        </div>
+            
+    </div>
+
+    
+    
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+            <div id="loader"></div>
+        <!-- Modal content -->
+        <div class="modal-content" id="modal-content">
+            <span class="close" id="close_add_item_panel">&times;</span>
+            <h3>Borrow Item</h3>
+            <form method="POST">
+                <input type="text" placeholder="Item's Number" id="br_item_number"><br>
+                <strong>Return Date: </strong> <input type="date" id="return_date_input"><br/>
+                <input type="button" value="Borrow" id="borrowItemBtn">
+            </form>
+        </div>
+
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
+    
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAtMBjsWOS8cEdoTJP5HMUJeyJfVMKP6XA",
+    authDomain: "smartlabapp-cb843.firebaseapp.com",
+    databaseURL: "https://smartlabapp-cb843.firebaseio.com",
+    projectId: "smartlabapp-cb843",
+    storageBucket: "smartlabapp-cb843.appspot.com",
+    messagingSenderId: "341823870022",
+    appId: "1:341823870022:web:2700c6d2a2819cb9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    </script>
+    <script src="./js/student_console.js"></script>
+    <script src="./js/student_console_get_items.js"></script>
+    <script src="./js/student_console_borrow_item.js"></script>
+</body>
+</html>

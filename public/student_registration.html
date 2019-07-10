@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student</title>
+    <link rel="stylesheet" href="./css/student_registration.css">
+</head>
+<body>
+    <div id="loader"></div>
+    <div class="parent" id="parent">
+        <div class="login_form" id="login_form">
+            <h3>Login</h3>
+            <form id="login_form2" method="POST">
+                <input type="email" placeholder="Enter Email" id="stu_login_email"><br>
+                <input type="password" placeholder="Enter Password" id="stu_login_pwd"><br>
+                <input type="button" value="LOGIN" id="gotoLogin">
+            </form>
+            <p>Not Registered ? <span id="jumpToRegister">click here</span></p>
+            <p>Go to Home Page ? <span id="jumpToHome">click here</span></p>
+            <p id="login_status"></p>
+        </div>
+        <div class="registration_form" id="registration_form">
+            <h3>Register</h3>
+            
+            <form id="registration_form2" method="POST">
+                <input type="text" id="stu_name" placeholder="Name"><br>
+                <input type="text" id="stu_enrll_num" placeholder="Enrollment Number"><br>
+                <input type="email" id="stu_email" placeholder="Email"><br>
+                <input type="tel" id="stu_mobile" placeholder="Mobile"><br>
+                <input type="text" id="stu_school" placeholder="School Name"><br>
+                <input type="password" placeholder="Password" id="stu_pwd"><br>
+                <input type="password" placeholder="Confirm Password" id="stu_conf_pwd"><br>
+                <input type="button" value="Register" id="gotoRegister">
+
+            </form>
+            <p>Already Registered ? <span id="jumpToLogin">click here</span></p>
+            
+            <p id="reg_status"></p>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAtMBjsWOS8cEdoTJP5HMUJeyJfVMKP6XA",
+    authDomain: "smartlabapp-cb843.firebaseapp.com",
+    databaseURL: "https://smartlabapp-cb843.firebaseio.com",
+    projectId: "smartlabapp-cb843",
+    storageBucket: "smartlabapp-cb843.appspot.com",
+    messagingSenderId: "341823870022",
+    appId: "1:341823870022:web:2700c6d2a2819cb9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="./js/student_registration.js"></script>
+</body>
+</html>

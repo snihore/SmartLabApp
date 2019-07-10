@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: blueviolet;
+}
+.parent{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.login_form{
+    position: relative;
+    display: block;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.login_form h3{
+    color: blueviolet;
+    font-family: cursive;
+}
+.login_form input{
+    width: 200px;
+    padding: 10px;
+    border: 0;
+    border-bottom: 2px solid blueviolet;
+    color: blueviolet;
+    margin-top: 20px;
+
+}
+#gotoLogin{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid blueviolet;
+    margin-bottom: 20px;
+}
+#gotoLogin:hover{
+    background: white;
+    border: 3px solid blueviolet;
+    color: blueviolet;
+}
+.login_form p span{
+    text-decoration: none;
+    color: blueviolet;
+    cursor: pointer;
+}
+.login_form p span:hover{
+    text-decoration: underline;
+}
+.login_form #login_status{
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: left;
+    font-style: italic;
+}
+
+.registration_form{
+    position: relative;
+    display: none;
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.registration_form h3{
+    color: blueviolet;
+    font-family: cursive;
+}
+.registration_form input{
+    width: 300px;
+    padding: 10px;
+    border: 0;
+    border-bottom: 2px solid blueviolet;
+    color: blueviolet;
+    margin-top: 20px;
+
+}
+#gotoRegister{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid blueviolet;
+    margin-bottom: 20px;
+}
+#gotoRegister:hover{
+    background: white;
+    border: 3px solid blueviolet;
+    color: blueviolet;
+}
+.registration_form p span{
+    text-decoration: none;
+    color: blueviolet;
+    cursor: pointer;
+}
+.registration_form #reg_status{
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: left;
+    font-style: italic;
+}
+.registration_form p span:hover{
+    text-decoration: underline;
+}
+/* LOADER */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    display: none;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media screen and (max-width:640px){
+    .parent{
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    .login_form{
+        
+        position: relative;
+        display: block;
+        width: 50%;
+        margin: auto;
+        margin-top: 50px;
+        background-color: white;
+        border-radius: 10px;
+        /* padding: 50px; */
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .login_form input{
+        width: 100%;
+        padding: 10px;
+        border: 0;
+        border-bottom: 2px solid blueviolet;
+        color: blueviolet;
+        margin-top: 20px;
+    
+    }
+    
+.registration_form{
+    position: relative;
+    display: none;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+    
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.registration_form input{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-bottom: 2px solid blueviolet;
+    color: blueviolet;
+    margin-top: 20px;
+
+}
+  }
